@@ -1,6 +1,17 @@
-def imprimir(a):
-    return
+# -*- coding: utf-8 -*-
 
+a=(['+',3,2,1,4,1],[2,4,6,2,6,2,4])
+a=str(a)
+
+
+def imprimir(a):
+    c=''
+    for x in a[0] : 
+        c = c+''.join(x) 
+    print (c)
+
+    
+    
 
 def suma(a, b):
     pass
@@ -28,3 +39,7 @@ def pi():
 
 if __name__ == "__main__":
     print(imprimir(pi()))
+
+
+print (a)
+imprimir (a)
