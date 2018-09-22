@@ -1,10 +1,11 @@
 class MyFloat:
 
-    def __init__(self):
-        pass
+    def __init__(self, ent, dec):
+        self.ent=ent
+        self.dec=dec
 
-    def __add__(self):
-        pass
+    def __add__(self, other):
+        return MyFloat(self.ent+other.ent,delf.dec+other.dec)
 
     def __sub__(self):
         pass
