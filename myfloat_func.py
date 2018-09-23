@@ -14,7 +14,22 @@ def imprimir(a):
     
 
 def suma(a, b):
-    pass
+    resul=(d,e)
+    for i in range(len(a[0])):
+      resul.append(a[i])
+
+    for i in range(len(b[0])):
+      d[i] = a[i] +b[i]
+    
+    for i in range(len(a[1])):
+      resul.append(a[i])
+
+    for i in range(len(b[1])):
+      e[i] = a[i] +b[i]
+    resul=(d,e)
+
+    print(resul)
+    
 
 
 def resta(a, b):
