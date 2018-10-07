@@ -5,11 +5,23 @@ a=str(a)
 
 
 def imprimir(a):
-    for i in range(len(a[0]),0,-1):
-        print (a[0][i-1], end='',)
-    print (',', end='')
-    for i in range (len(a[1],0,-1):
-        print (a[1][i-1],end='',)
+    a0=a[0]
+    a1=a[1]
+
+    #print (type(a0))
+
+    a0.reverse()
+    a0.append(',')
+
+    #b0=str(a0)
+    #print (type(b0[3]))
+
+    #print (a0)
+    resul=a0+a1
+
+    #print (resul)
+
+    print (''.join(map(str,resul)))  
                                 
         
 def suma(a, b):
