@@ -413,7 +413,28 @@ def comparacion(a,b):
     else:
         print ("No son iguales")
 def pi():
-    pass
+	pi_num = (4*sum((-1)**i/(2*i+1.)for i in range(9**6)))
+	
+	c0=int(pi_num)
+    c1=abs(pi_num)-abs(int(pi_num))  
+            
+	c0=str(c0)        
+    c0=list(c0)        
+            
+    c1=str(c1)        
+    c1=list(c1)
+                  
+    c0.insert(0,'+')
+    c0.reverse()
+           
+                   
+    c1.remove('0')
+    c1.remove('.')
+    pi_resul=(c0,c1)	
+    return (pi_resul) 
+       
 if __name__=="__main__":
     print (imprimir(pi()))
+
+print (pi())
 
