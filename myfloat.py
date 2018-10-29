@@ -197,14 +197,22 @@ class MyFloat:
     def __rsub__(self,other):
         return self.__sub__(other)
 
-    def __rmul__(self):
-        pass
+    def __rmul__(self,other):
+        return self.__mul__(other)
 
-    def __rdiv__(self):
-        pass
+    def __rdiv__(self,other):
+        return self.__div__(other)
 
     def __str__(self):
-        pass
+        a0=self.a[0]
+        a1=self.a[1]
+        
+        a0.reverse()
+        a0.append(',')
+       
+        self.resul=a0+a1
+        
+        return (''.join(map(str,self.resul)))
 
     def __repr__(self):
         pass
