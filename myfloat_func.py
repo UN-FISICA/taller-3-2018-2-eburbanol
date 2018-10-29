@@ -323,7 +323,7 @@ def division(a,b):
     #print (type(b))
     #print (b)
         
-    c=a*b
+    c=a/b
     #print (type(c))
        
     if c>=0: 

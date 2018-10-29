@@ -26,9 +26,9 @@ class MyFloat:
     def __add__(self, other):
         if isinstance (other, MyFloat):            
             self.sum=self.a+self.other
-            if self.num>=0: 
-                c0=int(self.c)
-                c1=abs(self.c)-abs(int(self.c))  
+            if self.sum>=0: 
+                c0=int(self.sum)
+                c1=abs(self.sum)-abs(int(self.sum))  
                 
                 c0=str(c0)        
                 c0=list(c0)        
@@ -46,8 +46,8 @@ class MyFloat:
         
             
             else:
-                c0=int(self.c)
-                c1=abs(self.c)-abs(int(self.c))  
+                c0=int(self.sum)
+                c1=abs(self.sum)-abs(int(self.sum))  
                 
                 c0=str(c0)        
                 c0=list(c0)        
@@ -65,20 +65,137 @@ class MyFloat:
             return self.sum
         else: return NotImplemented
 
-    def __sub__(self):
-        pass
+    def __sub__(self,other):
+        if isinstance (other, MyFloat):            
+            self.res=self.a-self.other
+            if self.res>=0: 
+                c0=int(self.res)
+                c1=abs(self.res)-abs(int(self.res))  
+                
+                c0=str(c0)        
+                c0=list(c0)        
+                
+                c1=str(c1)        
+                c1=list(c1)
+                  
+                c0.insert(0,'+')
+                c0.reverse()
+               
+                   
+                c1.remove('0')
+                c1.remove('.')
+                self.res=(c0,c1)
+        
+            
+            else:
+                c0=int(self.res)
+                c1=abs(self.res)-abs(int(self.res))  
+                
+                c0=str(c0)        
+                c0=list(c0)        
+            
+                c1=str(c1)        
+                c1=list(c1)
+                      
+                c0.insert(0,'-')
+                c0.reverse()
+           
+                   
+                c1.remove('0')
+                c1.remove('.')
+                self.res=(c0,c1)
+            return self.res
+        else: return NotImplemented
 
-    def __mul__(self):
-        pass
+    def __mul__(self, other):
+        if isinstance (other, MyFloat):            
+            self.mul=self.a*self.other
+            if self.mul>=0: 
+                c0=int(self.mul)
+                c1=abs(self.mul)-abs(int(self.mul))  
+                
+                c0=str(c0)        
+                c0=list(c0)        
+                
+                c1=str(c1)        
+                c1=list(c1)
+                  
+                c0.insert(0,'+')
+                c0.reverse()
+               
+                   
+                c1.remove('0')
+                c1.remove('.')
+                self.mul=(c0,c1)
+        
+            
+            else:
+                c0=int(self.mul)
+                c1=abs(self.mul)-abs(int(self.mul))  
+                
+                c0=str(c0)        
+                c0=list(c0)        
+            
+                c1=str(c1)        
+                c1=list(c1)
+                      
+                c0.insert(0,'-')
+                c0.reverse()
+           
+                   
+                c1.remove('0')
+                c1.remove('.')
+                self.mul=(c0,c1)
+            return self.mul
+        else: return NotImplemented
 
-    def __div__(self):
-        pass
+    def __div__(self, other):
+        if isinstance (other, MyFloat):            
+            self.div=self.a/self.other
+            if self.div>=0: 
+                c0=int(self.div)
+                c1=abs(self.div)-abs(int(self.div))  
+                
+                c0=str(c0)        
+                c0=list(c0)        
+                
+                c1=str(c1)        
+                c1=list(c1)
+                  
+                c0.insert(0,'+')
+                c0.reverse()
+               
+                   
+                c1.remove('0')
+                c1.remove('.')
+                self.div=(c0,c1)
+        
+            
+            else:
+                c0=int(self.div)
+                c1=abs(self.div)-abs(int(self.div))  
+                
+                c0=str(c0)        
+                c0=list(c0)        
+            
+                c1=str(c1)        
+                c1=list(c1)
+                      
+                c0.insert(0,'-')
+                c0.reverse()
+           
+                   
+                c1.remove('0')
+                c1.remove('.')
+                self.div=(c0,c1)
+            return self.div
+        else: return NotImplemented
 
-    def __radd__(self):
-        pass
+    def __radd__(self,other):
+        return self.__add__(other)
 
-    def __rsub__(self):
-        pass
+    def __rsub__(self,other):
+        return self.__sub__(other)
 
     def __rmul__(self):
         pass
